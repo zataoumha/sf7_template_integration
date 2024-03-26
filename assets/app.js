@@ -5,6 +5,7 @@ import './vendor/css/theme-default.css';
 import './styles/css/demo.css';
 import './vendor/libs/perfect-scrollbar/perfect-scrollbar.css';
 import './vendor/libs/apex-charts/apex-charts.css';
+import './styles/css/sweetalert2.min.css';
 
 import './vendor/js/helpers.js';
 import './scripts/js/config.js';
@@ -17,6 +18,8 @@ import './vendor/js/menu.js';
 import './vendor/libs/apex-charts/apexcharts.js';
 import './scripts/js/main.js';
 import './scripts/js/dashboards-analytics.js';
+import './scripts/js/sweetalert2.all.min.js';
+import './scripts/alerts.js';
 
 
 

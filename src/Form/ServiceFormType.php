@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\FormBuilderInterface;
+use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
@@ -24,11 +25,9 @@ class ServiceFormType extends AbstractType
             ])
             ->add('slug', TextType::class)
             ->add('description', TextareaType::class)
-            ->add('image', FileType::class)
-            ->add('save', SubmitType::class, [
-                'label'=>'Create'
-            ])
+            ->add('image', TextType::class)
             ->addEventListener(FormEvents::POST_SUBMIT, $this->attachTimesTamp(...))
+            ->addEventListener(FormEvents::POST_SUBMIT, $this->archiveService(...))
         ;
     }
 
@@ -43,6 +42,13 @@ class ServiceFormType extends AbstractType
 
         if(!$data->getId()){
             $data->setCreatedAt(new DateTimeImmutable());
+        }
+    }
+
+    public function archiveService(PostSubmitEvent $event){
+        $data = $event->getData();
+        if(!$data->getId()){
+            $data->setIsArchived(false);
         }
     }
 

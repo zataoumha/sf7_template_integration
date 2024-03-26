@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Archived Services{% endblock %}
+
+{% block body %}
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard / services /</span> archived</h4>
+                    <a href="{{path('app.services.index')}}" class="btn btn-info"><i class="bx bx-arrow-back me-1"></i></a>                </div>
+              {% include 'partials/flash.html.twig' %}
+              <div class="card">
+              
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>Title</th>
+                        <th>Created At</th>
+                        <th>Updated At</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                    {% for service in services %}
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{service.title}}</strong></td>
+                        <td>{{service.createdAt |date('d/m/Y')}}</td>
+                        <td>{{service.updatedAt ? service.updatedAt | date('d/m/Y') : '-'}}</td>
+                        <td><span class="badge bg-label-primary me-1">{{service.status}}</span></td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-show-alt me-1 text-success"></i> Show</a>
+                              <a class="dropdown-item" href="{{path('app.services.update', {service:service.id})}}"><i class="bx bx-edit-alt me-1 text-warning"></i> Edit</a>
+                              <a class="dropdown-item" id="delete-service"  href="{{path('app.services.delete', {service:service.id})}}"><i class="bx bx-trash me-1 text-danger"></i> Delete</a>
+                              <a class="dropdown-item" href="{{path('app.services.archive', {service:service.id})}}"><i class="bx bx-archive me-1 text-info"></i> Unarchive</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
+{% endblock %}

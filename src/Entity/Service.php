@@ -35,6 +35,9 @@ class Service
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $status = null;
 
+    #[ORM\Column]
+    private ?bool $isArchived = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -120,6 +123,18 @@ class Service
     public function setStatus(?string $status): static
     {
         $this->status = $status;
+
+        return $this;
+    }
+
+    public function isIsArchived(): ?bool
+    {
+        return $this->isArchived;
+    }
+
+    public function setIsArchived(bool $isArchived): static
+    {
+        $this->isArchived = $isArchived;
 
         return $this;
     }
