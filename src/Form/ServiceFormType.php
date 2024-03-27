@@ -14,6 +14,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\Form\FormEvent;
 use Symfony\Component\Form\FormEvents;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Validator\Constraints\File;
 
 class ServiceFormType extends AbstractType
 {
@@ -25,7 +26,23 @@ class ServiceFormType extends AbstractType
             ])
             ->add('slug', TextType::class)
             ->add('description', TextareaType::class)
-            ->add('image', TextType::class)
+            ->add('image', FileType::class, [
+                'mapped' => false,
+                'required' => true,
+                'constraints' => [
+                    new File([
+                        'maxSize' => '1024k',
+                        'mimeTypes' => [
+                            'image/jpeg',
+                            'image/png',
+                            'image/gif',
+                            'image/bmp',
+                            'image/webp',
+                            ],
+                        'mimeTypesMessage' => 'Please upload a valid image document',
+                    ])
+                ],
+            ])
             ->addEventListener(FormEvents::POST_SUBMIT, $this->attachTimesTamp(...))
             ->addEventListener(FormEvents::POST_SUBMIT, $this->archiveService(...))
         ;

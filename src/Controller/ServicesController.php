@@ -5,11 +5,15 @@ namespace App\Controller;
 use App\Entity\Service;
 use App\Form\ServiceFormType;
 use App\Repository\ServiceRepository;
+use App\Service\FileUploader;
+use App\Service\UploaderService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
+use Symfony\Component\String\Slugger\SluggerInterface;
+
 #[Route('/dashboard')]
 class ServicesController extends AbstractController
 {
@@ -24,12 +28,17 @@ class ServicesController extends AbstractController
     }
 
     #[Route('/services/create', name: 'app.services.create')]
-    public function create(Request $request, EntityManagerInterface $em): Response
+    public function create(Request $request, EntityManagerInterface $em, UploaderService $uploader): Response
     {
         $service = new Service();
         $form = $this->createForm(ServiceFormType::class, $service);
         $form->handleRequest($request);
         if($form->isSubmitted() && $form->isValid()){
+            $serviceImage = $form->get('image')->getData();
+            if ($serviceImage) {
+                $serviceFileName = $uploader->upload($serviceImage, 'service');
+                $service->setImage($serviceFileName);
+            }
             $em->persist($service);
             $em->flush();
             $this->addFlash('success','Service created successfully !');
@@ -43,12 +52,17 @@ class ServicesController extends AbstractController
     }
 
     #[Route('/services/update/{service}', name: 'app.services.update')]
-    public function update(Request $request, Service $service, EntityManagerInterface $em): Response
+    public function update(Request $request, Service $service, EntityManagerInterface $em, UploaderService $uploader): Response
     {
         $form = $this->createForm(ServiceFormType::class, $service);
         $form->handleRequest($request);
 
         if($form->isSubmitted() && $form->isValid()){
+            $serviceImage = $form->get('image')->getData();
+            if ($serviceImage) {
+                $serviceFileName = $uploader->upload($serviceImage, 'service');
+                $service->setImage($serviceFileName);
+            }
             $em->persist($service);
             $em->flush();
             $this->addFlash('success','Service updated successfully !');
