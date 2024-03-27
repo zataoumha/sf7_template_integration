@@ -6,6 +6,12 @@
 /.env.*.local
 /config/secrets/prod/prod.decrypt.private.php
 /public/bundles/
+services_images/
+profile_images/
+uploaded_videos/
+images/
+contact_files/
+exported_files/
 /var/
 /vendor/
 ###< symfony/framework-bundle ###
