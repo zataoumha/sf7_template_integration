@@ -1,20 +1,59 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello UsersController!{% endblock %}
+{% block title %}Users{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
-
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
-
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/mouataz/formation/sf7_template_integration/src/Controller/UsersController.php</code></li>
-        <li>Your template at <code>/home/mouataz/formation/sf7_template_integration/templates/users/index.html.twig</code></li>
-    </ul>
-</div>
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Users</h4>
+                    <a href="{{path('app.users.create')}}" class="btn btn-success"><i class="bx bx-plus me-1"></i></a>
+                </div>
+              {% include 'partials/flash.html.twig' %}
+              <div class="card">
+              
+                <div class="table-responsive text-nowrap">
+                  <table class="table">
+                    <thead>
+                      <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>Email</th>
+                        <th>Status</th>
+                        <th>Actions</th>
+                      </tr>
+                    </thead>
+                    <tbody class="table-border-bottom-0">
+                    {% for user in users %}
+                      <tr>
+                        <td><i class="fab fa-angular fa-lg text-danger me-3"></i> <strong>{{user.firstName}}</strong></td>
+                        <td>{{user.lastName}}</td>
+                        <td>{{user.email}}</td>
+                        <td>
+                            <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" {{user.isActivated ? 'checked': '' }}>
+                                <label class="form-check-label" for="flexSwitchCheckDefault">
+                                <span class="badge bg-label-{{user.isActivated ? "success":"danger"}} me-1">{{user.isActivated ? "Active":"Blocked"}}</span>
+                                </label>
+                            </div>
+                        </td>
+                        <td>
+                          <div class="dropdown">
+                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
+                              <i class="bx bx-dots-vertical-rounded"></i>
+                            </button>
+                            <div class="dropdown-menu">
+                            <a class="dropdown-item" href="{{path('app.users.show', {user:user.id})}}"><i class="bx bx-show-alt me-1 text-success"></i> Show</a>
+                              <a class="dropdown-item" href="{{path('app.users.update', {user:user.id})}}"><i class="bx bx-edit-alt me-1 text-warning"></i> Edit</a>
+                              <a class="dropdown-item" id="delete-user"  href="{{path('app.users.delete', {user:user.id})}}"><i class="bx bx-trash me-1 text-danger"></i> Delete</a>
+                            </div>
+                          </div>
+                        </td>
+                      </tr>
+                    {% endfor %}
+                    </tbody>
+                  </table>
+                </div>
+              </div>
+            </div>
 {% endblock %}
