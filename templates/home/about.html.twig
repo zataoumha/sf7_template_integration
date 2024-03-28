@@ -1,0 +1,75 @@
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_about.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | About{% endblock %}
+
+{% block body %}
+<!-- CONTENT START -->
+<section>
+    <!-- ABOUT SECTION START -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-lg-6">
+                <div class="about-info-layer">
+                    <h5 class="subtitle">Über uns </h5>
+                    <h2>Reinigung isunsere Expertise</h2>
+                    <p><strong>Clean-Buildings: Reinigen. Erfrischen. Wohlfühlen.</strong></p>
+                    <div class="brand-layer d-flex">
+                        <figure class="signature">
+                            <img src="{{asset('frontoffice/images/service-1.jpg')}}" alt="">
+                        </figure>
+                        <div class="bl-contact">
+                            <h4>  Wir helfen Ihnen weiter</h4>
+                            <p> <img  style=" height: 20px; width: 20px" src="{{asset('frontoffice/images/icons/email.png')}}" alt=""> &ensp;info@clean-buildings.de</p>
+                            <p><img  style=" height: 20px; width: 20px" src="{{asset('frontoffice/images/icons/telephone.png')}}" alt=""> &ensp;  0201 69569745</p>
+                            <p><img  style=" height: 20px; width: 20px" src="{{asset('frontoffice/images/icons/placeholder.png')}}" alt=""> &ensp;Clean Buildings Gebäudeservice Krablerstraße 127, 45326 Essen</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 spacing-md">
+                <figure class="about-img-layer">
+                    <img src="{{asset('frontoffice/images/service-2.jpg')}}" alt="">
+                </figure>
+            </div>
+        </div>
+            <div class="row mt-5">
+                <div class="col-lg-4">
+                    <div class="icon-circle-layer">
+                        <h4>Erstklassige Servicegarantie</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4 spacing-m-center">
+                    <div class="icon-circle-layer">
+                        <h4>Effiziente Reinigungsprozesse und – technologien</h4>
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="icon-circle-layer">
+                        <h4>Kundenzufriedenheit und Kommunikation</h4>
+                    </div>
+                </div>
+            </div>
+    </div>
+    <!-- ABOUT SECTION END -->
+    <!-- CERTIFICATION SECTION START  -->
+    <div class="bg-wrapper mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-info-layer">
+
+                        <h2>Zertifizierte Leistungen</h2>
+                        <p>
+                            Wir freuen uns sehr, Sie auf unserer Website begrüßen zu dürfen. Bei Clean-Buildings sind wir nicht einfach nur eine Gebäudereinigungsfirma - wir sind Ihr Partner für ein rundum sauberes und einladendes Ambiente! Unser Team besteht aus engagierten Experten, die mit Leidenschaft und Sorgfalt jedes Detail Ihres Gebäudes auf Hochglanz bringen.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--CERTIFICATION SECTION END -->
+</section>
+<!-- CONTENT END -->
+{% endblock %}

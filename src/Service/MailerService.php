@@ -38,7 +38,6 @@ class MailerService
         $this->mailer = $mailer;
         $this->em = $em;
         $this->translator  = $translator;
-        
     }
 
     /**

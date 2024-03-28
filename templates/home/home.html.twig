@@ -1,11 +1,10 @@
-@extends('layouts.base_normal')
-@section('slider')
-@extends('layouts.variables.hero_home')
-@endsection
-@section('title')
-GEBAUDESERVICES | Home
-@endsection
-@section('body')
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_home.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | Home{% endblock %}
+
+{% block body %}
  <!-- HOME ABOUT START -->
  <div class="about-wrapper">
     <div class="container">
@@ -13,7 +12,7 @@ GEBAUDESERVICES | Home
             <div class="col-lg-4">
                 <div class="ab-box white-bg box-shadow">
                     <figure class="icon ab-box-icon">
-                        <img src="{{asset('front-office/images/icons/cleaning-hand-alt.png')}}" alt="">
+                        <img src="{{asset('frontoffice/images/icons/cleaning-hand-alt.png')}}" alt="">
                     </figure>
                     <h4>Fachkompetenz & Professionalität</h4>
                     <p> Geschultes Personal, moderne Technologien, Branchenkenntnisse.</p>
@@ -22,7 +21,7 @@ GEBAUDESERVICES | Home
             <div class="col-lg-4 spacing-m-center">
                 <div class="ab-box white-bg box-shadow">
                     <figure class="icon ab-box-icon">
-                        <img src="{{asset('front-office/images/icons/broom.png')}}" alt="">
+                        <img src="{{asset('frontoffice/images/icons/broom.png')}}" alt="">
                     </figure>
                     <h4>Nachhaltigkeit & Umweltverantwortung</h4>
                     <p>
@@ -35,7 +34,7 @@ GEBAUDESERVICES | Home
             <div class="col-lg-4">
                 <div class="ab-box white-bg box-shadow">
                     <figure class="icon ab-box-icon">
-                        <img src="{{asset('front-office/images/icons/house-cleaning.png')}}" alt="">
+                        <img src="{{asset('frontoffice/images/icons/house-cleaning.png')}}" alt="">
                     </figure>
                     <h4>Kundenzentrierter Ansatz</h4>
                     <p>
@@ -46,32 +45,6 @@ GEBAUDESERVICES | Home
                 </div>
             </div>
         </div>
-      {{--   <div class="row mt-5">
-            <div class="col-lg-4">
-                <div class="col-about-content">
-                    <h2 style="color:#FFFFFF;">A Clean House is a Happy Place!</h2>
-                    <p><strong>GEBAUDESERVICES has met the demands of a growing world.</strong></p>
-                </div>
-            </div>
-            <div class="col-lg-4 spacing-m-center">
-                <div class="col-about-content">
-                    <div class="dropcaps">
-                        <p>
-                            <span-dropcaps>G</span-dropcaps>EBAUDESERVICES customers has a tremendous opportunity to
-                            answer the call of logistic needs across the globe. Has 26 affiliated state soybean
-                            associations representing 30 soybean-producing state.
-                        </p>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-4">
-                <div class="col-about-content">
-                    <p>World’s leading non-asset- based supply chain management companies, we design and implement
-                        industry-leading. We specialise in intelligent & effective search and believes in
-                        the power of partnerships to grow business.</p>
-                </div>
-            </div>
-        </div> --}}
     </div>
 </div>
 <!-- HOME ABOUT END -->
@@ -109,7 +82,7 @@ GEBAUDESERVICES | Home
                 <div class="icon-circle-layer">
                     <div class="ic-box">
                         <figure class="center-icon">
-                            <img class="rotating" src="{{asset('front-office/images/icons/team.png')}}" alt="">
+                            <img class="rotating" src="{{asset('frontoffice/images/icons/team.png')}}" alt="">
                         </figure>
                     </div>
                     <h4>Professionelles Team</h4>
@@ -124,7 +97,7 @@ GEBAUDESERVICES | Home
                 <div class="icon-circle-layer">
                     <div class="ic-box">
                         <figure class="center-icon">
-                            <img class="rotating" src="{{asset('front-office/images/icons/24-hours-phone-service.png')}}" alt="">
+                            <img class="rotating" src="{{asset('frontoffice/images/icons/24-hours-phone-service.png')}}" alt="">
                         </figure>
                     </div>
                     <h4>24/7 Schnelle Erreichbarkeit</h4>
@@ -140,7 +113,7 @@ GEBAUDESERVICES | Home
                 <div class="icon-circle-layer">
                     <div class="ic-box">
                         <figure class="center-icon">
-                            <img class="rotating" src="{{asset('front-office/images/icons/guarantee.png')}}" alt="">
+                            <img class="rotating" src="{{asset('frontoffice/images/icons/guarantee.png')}}" alt="">
                         </figure>
                     </div>
                     <h4>Service- und Leistungsgarantie</h4>
@@ -163,7 +136,6 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
             <div class="col-lg-6">
                 <div class="ws-feature-right">
                     <div class="feature-right-content">
-                        {{-- <h5 class="subtitle">Maid for you</h5> --}}
                         <h3>Die Umwelt ist uns wichtig!</h3>
                         <p>
                         Für unser nachhaltiges Konzept stehen Hygiene, Keimschutz und Pflege an erster Stelle.
@@ -174,7 +146,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                             
                             <div class="inner-bc">
                                 <figure class="bc-icon">
-                                    <img src="{{asset('front-office/images/icons/blue-cleaning-tools.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/blue-cleaning-tools.png')}}" alt="">
                                 </figure>
                                 <h4>Sauberkeit mit Zukunft – Clean-Buildings, grün reinigen!</h4>
                                 
@@ -188,7 +160,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
     <!-- HOME WIDE SECTION END -->
 
     <!-- HOME SERVICE START -->
-    <div class="ws-parallax-services " style="background-image:url('{{asset('front-office/images/service-1.jpg')}}');">
+    <div class="ws-parallax-services " style="background-image:url('{{asset('frontoffice/images/service-1.jpg')}}');">
         <div class="container">
             <div class="pc-center">
                 <div class="section-heading">
@@ -210,7 +182,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Unterhaltsreinigung</h4>
                                 <p>Unterhaltsreinigung: Regelmäßige Pflege für dauerhafte
@@ -220,7 +192,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-service-glass-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-service-glass-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Glas- und Rahmenreinigung</h4>
                                 <p>Glas- und Rahmenreinigung bezeichnet die Pflege und
@@ -231,7 +203,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-cleaner.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-cleaner.png')}}" alt="">
                                 </figure>
                                 <h4>Entrümplung</h4>
                                 <p>Entrümplung: Beseitigung von Unordnung und überflüssigen
@@ -241,7 +213,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-cleaning-tools.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-cleaning-tools.png')}}" alt="">
                                 </figure>
                                 <h4>Grundreinigung</h4>
                                 <p>Grundreinigung: Intensive Reinigung für umfassende Sauberkeit,
@@ -251,7 +223,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-vaccum-cleaner.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-vaccum-cleaner.png')}}" alt="">
                                 </figure>
                                 <h4>Fassadenreinigung</h4>
                                 <p> Fassadenreinigung verbessert das äußere Erscheinungsbild von
@@ -262,7 +234,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-house-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Endbaureinigung</h4>
                                 <p>Endbaureinigung: Abschließende Reinigung vor der
@@ -273,7 +245,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-house-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Dachrinnenreinigung</h4>
                                 <p>Dachrinnenreinigung: Entfernung von Ablagerungen für eine
@@ -283,7 +255,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-house-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Winterdienst</h4>
                                 <p>Winterdienst" umfasst Maßnahmen wie Schneeräumung und
@@ -294,7 +266,7 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         <div class="item">
                             <div class="ws-box-services">
                                 <figure class="ws-box-icon">
-                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-house-cleaning.png')}}" alt="">
                                 </figure>
                                 <h4>Treppenhausreinigung</h4>
                                 <p>Treppenhausreinigung" bezeichnet die regelmäßige Pflege
@@ -304,9 +276,6 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                         </div>
 
                     </div>
-                   {{--  <div class="text-center mt-5 mb-5">
-                        <a href="{{route('services')}}" class="btn-washla btn-lg mt-3">See all services</a href="{{route('services')}}">
-                    </div> --}}
                     <div class="owl-theme">
                         <div class="owl-controls">
                             <div class="custom-nav owl-nav"></div>
@@ -380,9 +349,8 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
                     <div class="pulse"><i class="fas fa-play"></i></div>
                 </a>
             </div>
-            {{-- <p>Cleaning your Worries Away</p> --}}
             <h2>Fordern Sie hier ein kostenloses Angebot an</h2>
-            <a href="{{route('contact')}}" class="btn-washla btn-lg mt-3">Angebot anfordern</a>
+            <a href="" class="btn-washla btn-lg mt-3">Angebot anfordern</a>
         </div>
     </div>
     <!-- VIDEO POPUP END -->
@@ -391,13 +359,13 @@ ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative 
 
 </section>
 <!-- CONTENT END -->
-@endsection
+{% endblock %}
 
-@section('js')
+{% block js %}
 <script>
 if (window.innerWidth < 768) {
   $('.flickity-enabled').flickity('unbindDrag');
 }
 
 </script>
-@endsection
+{% endblock %}

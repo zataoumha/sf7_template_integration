@@ -1,11 +1,10 @@
-@extends('layouts.base_normal')
-@section('slider')
-@extends('layouts.variables.hero_contact')
-@endsection
-@section('title')
-GEBAUDESERVICES | Contact
-@endsection
-@section('body')
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_contact.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | Contact{% endblock %}
+
+{% block body %}
 <!-- CONTENT START -->
 <section>
     <!-- CONTACT BOX START -->
@@ -15,7 +14,7 @@ GEBAUDESERVICES | Contact
                 <div class="col-lg-4">
                     <div class="cw-box">
                         <figure class="cw-icon">
-                            <img src="{{asset('front-office/images/icons/placeholder.png')}}" alt="">
+                            <img src="{{asset('frontoffice/images/icons/placeholder.png')}}" alt="">
                         </figure>
                         <p>Krablerstraße 12745326 Essen</p>
                     </div>
@@ -23,7 +22,7 @@ GEBAUDESERVICES | Contact
                 <div class="col-lg-4 spacing-m-center">
                     <div class="cw-box">
                         <figure class="cw-icon">
-                            <img src="{{asset('front-office/images/icons/telephone.png')}}" alt="">
+                            <img src="{{asset('frontoffice/images/icons/telephone.png')}}" alt="">
                         </figure>
                         <p>0176 633 069 20</p>
 
@@ -32,7 +31,7 @@ GEBAUDESERVICES | Contact
                 <div class="col-lg-4">
                     <div class="cw-box">
                         <figure class="cw-icon">
-                            <img src="{{asset('front-office/images/icons/email.png')}}" alt="">
+                            <img src="{{asset('frontoffice/images/icons/email.png')}}" alt="">
                         </figure>
                         <p>info@clean-buildings.de</p>
 

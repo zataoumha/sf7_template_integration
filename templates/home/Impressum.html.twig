@@ -1,11 +1,10 @@
-@extends('layouts.base_normal')
-@section('slider')
-@extends('layouts.variables.hero_impressum')
-@endsection
-@section('title')
-GEBAUDESERVICES | Imressum
-@endsection
-@section('body')
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_impressum.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | Imressum{% endblock %}
+
+{% block body %}
     <!-- CONTENT START -->
     <section>
         <!-- FAQ START -->
@@ -45,4 +44,4 @@ GEBAUDESERVICES | Imressum
 
     </section>
     <!-- CONTENT END -->
-@endsection
+{% endblock %}

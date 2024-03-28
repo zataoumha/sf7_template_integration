@@ -32,8 +32,8 @@
     <link rel="stylesheet" href="{{asset('frontoffice/css/responsive.css')}}">
     <style>
         .flickity-slider {
-  height: 100vh;
-}
+            height: 100vh;
+        }
 
     </style>
         {% block stylesheets %}
@@ -107,12 +107,12 @@
             <div id="main-nav" class="collapse navbar-collapse">
                 <ul class="navbar-nav ml-auto">
                     <li class="dropdown">
-                        <a href="" class="nav-item nav-link" >HOME</a>
+                        <a href="{{path('app.main')}}" class="nav-item nav-link" >HOME</a>
 
                     </li>
-                    <li><a href="" class="nav-item nav-link">Über uns</a></li>
+                    <li><a href="{{path('app.about')}}" class="nav-item nav-link">Über uns</a></li>
                     <li class="dropdown">
-                        <a href="" class="nav-item nav-link" data-toggle="dropdown">Leistungen</a>
+                        <a href="{{path('app.services')}}" class="nav-item nav-link" data-toggle="dropdown">Leistungen</a>
                         <div class="dropdown-menu">
                             {# @php
                                 $links = [
@@ -142,11 +142,11 @@
                         </div>
                     </li>
                     <li class="dropdown">
-                        <a href="" class="nav-item nav-link">Stellenangebote</a>
+                        <a href="{{path('app.offers')}}" class="nav-item nav-link">Stellenangebote</a>
 
                     </li>
 
-                    <li><a href="" class="nav-item nav-link last-link-item">Kontakt</a></li>
+                    <li><a href="{{path('app.contact')}}" class="nav-item nav-link last-link-item">Kontakt</a></li>
                 </ul>
             </div>
         </div>
@@ -238,7 +238,7 @@
     <script src="{{asset('frontoffice/js/slider.js')}}"></script>
     {# @yield('js') #}
     <!-- JAVASCRIPTS END -->
-
+    {% block js %}{% endblock %}
     </body>
 
     </html>

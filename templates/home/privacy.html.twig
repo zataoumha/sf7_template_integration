@@ -1,11 +1,10 @@
-@extends('layouts.base_normal')
-@section('slider')
-@extends('layouts.variables.hero_privacy')
-@endsection
-@section('title')
-GEBAUDESERVICES | Datenschutz­erklärung
-@endsection
-@section('body')
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_privacy.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | Datenschutz­erklärung{% endblock %}
+
+{% block body %}
     <!-- CONTENT START -->
     <section>
         <!-- FAQ START -->
@@ -97,4 +96,4 @@ Social-Media-Plugins mit Shariff<br>Auf dieser Website werden Plugins von sozial
 
     </section>
     <!-- CONTENT END -->
-@endsection
+{% endblock %}

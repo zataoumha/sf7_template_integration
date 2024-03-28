@@ -1,11 +1,10 @@
-@extends('layouts.base_normal')
-@section('slider')
-@extends('layouts.variables.hero_services')
-@endsection
-@section('title')
-GEBAUDESERVICES | Services
-@endsection
-@section('body')
+{% extends 'front_base.html.twig' %}
+{% block hero %}
+    {% include 'partials/hero_services.html.twig' %}
+{% endblock %} 
+{% block title %}GEBAUDESERVICES | Services{% endblock %}
+
+{% block body %}
  <!-- CONTENT START -->
  <section>
     <!-- SERVICE START -->
@@ -13,12 +12,12 @@ GEBAUDESERVICES | Services
         <div class="row">
             <a href="{{ route('details', ['id' => 1]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-1.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-1.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/white-cleaning-tools.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-cleaning-tools.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -31,12 +30,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 2]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-2.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-2.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/white-service-glass-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-service-glass-cleaning.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -49,12 +48,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 3]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-3.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-3.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/white-cleaning.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-cleaning.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -67,12 +66,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 4]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-4.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-4.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/white-vaccum-cleaner.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/white-vaccum-cleaner.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -85,12 +84,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 6]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-5.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-5.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/sponge.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/sponge.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -103,12 +102,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 9]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-6.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-6.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/happy-white.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -121,12 +120,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 7]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/carosel-1.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/carosel-1.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/happy-white.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -139,12 +138,12 @@ GEBAUDESERVICES | Services
             </a>
             <a href="{{ route('details', ['id' => 8]) }}" class="col-md-6 col-lg-4">
                 <div class="sb-washla">
-                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-2.jpg')}}" alt=""></figure>
+                    <figure class="sb-thumbail"><img src="{{asset('frontoffice/images/service-2.jpg')}}" alt=""></figure>
                     <div class="sb-caption">
                         <div class="sb-inner-caption">
                             <div class="sb-circle-layer-costum" id="circle-layer">
                                 <figure class="sb-center-icon">
-                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                    <img src="{{asset('frontoffice/images/icons/happy-white.png')}}" alt="">
                                 </figure>
                                 <h5 class="info-link">More info</h5>
                             </div>
@@ -160,4 +159,4 @@ GEBAUDESERVICES | Services
     <!-- SERVICE END -->
 </section>
 <!-- CONTENT END -->
-@endsection
+{% endblock %}
