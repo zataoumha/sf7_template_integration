@@ -1,0 +1,403 @@
+@extends('layouts.base_normal')
+@section('slider')
+@extends('layouts.variables.hero_home')
+@endsection
+@section('title')
+GEBAUDESERVICES | Home
+@endsection
+@section('body')
+ <!-- HOME ABOUT START -->
+ <div class="about-wrapper">
+    <div class="container">
+        <div class="row box-layers">
+            <div class="col-lg-4">
+                <div class="ab-box white-bg box-shadow">
+                    <figure class="icon ab-box-icon">
+                        <img src="{{asset('front-office/images/icons/cleaning-hand-alt.png')}}" alt="">
+                    </figure>
+                    <h4>Fachkompetenz & Professionalität</h4>
+                    <p> Geschultes Personal, moderne Technologien, Branchenkenntnisse.</p>
+                </div>
+            </div>
+            <div class="col-lg-4 spacing-m-center">
+                <div class="ab-box white-bg box-shadow">
+                    <figure class="icon ab-box-icon">
+                        <img src="{{asset('front-office/images/icons/broom.png')}}" alt="">
+                    </figure>
+                    <h4>Nachhaltigkeit & Umweltverantwortung</h4>
+                    <p>
+                        Abfallreduzierung,
+                        Recycling und
+                        Energieeffizienz.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="ab-box white-bg box-shadow">
+                    <figure class="icon ab-box-icon">
+                        <img src="{{asset('front-office/images/icons/house-cleaning.png')}}" alt="">
+                    </figure>
+                    <h4>Kundenzentrierter Ansatz</h4>
+                    <p>
+                        Maßgeschneiderte Lösungen,
+                        Reaktionsfähigkeite, Flexibilität
+                        und strenge Qualitätskontrolle
+                    </p>
+                </div>
+            </div>
+        </div>
+      {{--   <div class="row mt-5">
+            <div class="col-lg-4">
+                <div class="col-about-content">
+                    <h2 style="color:#FFFFFF;">A Clean House is a Happy Place!</h2>
+                    <p><strong>GEBAUDESERVICES has met the demands of a growing world.</strong></p>
+                </div>
+            </div>
+            <div class="col-lg-4 spacing-m-center">
+                <div class="col-about-content">
+                    <div class="dropcaps">
+                        <p>
+                            <span-dropcaps>G</span-dropcaps>EBAUDESERVICES customers has a tremendous opportunity to
+                            answer the call of logistic needs across the globe. Has 26 affiliated state soybean
+                            associations representing 30 soybean-producing state.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col-about-content">
+                    <p>World’s leading non-asset- based supply chain management companies, we design and implement
+                        industry-leading. We specialise in intelligent & effective search and believes in
+                        the power of partnerships to grow business.</p>
+                </div>
+            </div>
+        </div> --}}
+    </div>
+</div>
+<!-- HOME ABOUT END -->
+
+<!-- CONTENT START -->
+<section>
+    <!-- HOME WHY US START -->
+    <div class="container mt-5 mb-5">
+        <div class="section-heading">
+            <div class="row">
+                <div class="col-10 col-md-6 mx-auto text-center mb-4">
+                    <h5 class="subtitle">WHY CHOOSE US</h5>
+                    <h2>Warum Clean Buildings</h2>
+                    <p>
+                    Strahlende Fassaden, makellose Räumlichkeiten, hygienisch einwandfreie Umgebungen:
+                    Unsere Hingabe zum Handwerk der Gebäudereinigung macht uns zu Ihrem verlässlichen
+                    Partner in Essen. Egal, ob es um Bürogebäude, Krankenhäuser, Verkehrsmittel, Privathaushalt
+                    oder Lebensmittelproduktionsstätten geht – wir setzen neue Maßstäbe in Sachen Sauberkeit.
+                    </p>
+                    <p>
+                    Durch effiziente und ressourcenschonende Prozesse bewahren wir Werte und schaffen eine
+                    saubere Umgebung, in der sich sowohl Kunden als auch Mitarbeiter rundum wohlfühlen. An
+                    Stellen, wo Hygiene entscheidend ist, garantieren wir zuverlässige Sauberkeit. Dabei legen
+                    wir großen Wert auf den Einsatz umweltfreundlicher Reinigungsmittel.
+                    Mit einem überdurchschnittlichen Qualitätsbewusstsein entwickeln wir mit Ihnen individuelle
+                    Reinigungskonzepte. Unsere Dienstleistungen erstrecken sich über ganz Essen und
+                    Umgebung.
+                    Fordern Sie Ihr kostenfreies Angebot jederzeit bei uns an
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4">
+                <div class="icon-circle-layer">
+                    <div class="ic-box">
+                        <figure class="center-icon">
+                            <img class="rotating" src="{{asset('front-office/images/icons/team.png')}}" alt="">
+                        </figure>
+                    </div>
+                    <h4>Professionelles Team</h4>
+                    <p>
+                    Unser Team bei Clean-Building arbeitet stets leistungs-, ziel- und prozessorientiert. Hierbei wird sehr
+                    viel Wert auf die Erweiterung der Fachexpertise und anschließenden Auswertung gelegt. Zudem bieten
+                    wir Ihnen einen stabilen Personalpool für Ihre Zufriedenheit.
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4 spacing-m-center">
+                <div class="icon-circle-layer">
+                    <div class="ic-box">
+                        <figure class="center-icon">
+                            <img class="rotating" src="{{asset('front-office/images/icons/24-hours-phone-service.png')}}" alt="">
+                        </figure>
+                    </div>
+                    <h4>24/7 Schnelle Erreichbarkeit</h4>
+                    <p>
+                    Kontaktieren Sie uns jederzeit zu
+                    unseren Öffnungszeiten. Unser
+                    kompetentes Team berät Sie bei
+                    Fragen, Anliegen und Wünschen
+                    </p>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="icon-circle-layer">
+                    <div class="ic-box">
+                        <figure class="center-icon">
+                            <img class="rotating" src="{{asset('front-office/images/icons/guarantee.png')}}" alt="">
+                        </figure>
+                    </div>
+                    <h4>Service- und Leistungsgarantie</h4>
+                    <p>
+                    Wir achten bei uns auf: exakte Reinigungspläne, Leistungsverzeichnisse für Transparenz, Einsatz von
+ausgezeichneten Profi-Produkten. Qualitätskontrollen für konstant qualitative Reinigungsergebnisse
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HOME WHY US END -->
+
+    <!-- HOME WIDE SECTION START -->
+    <div class="ws-wrapper mt-5 mb-5">
+        <div class="row no-gutters">
+            <div class="col-lg-6">
+                <div class="ws-feature-left"></div>
+            </div>
+            <div class="col-lg-6">
+                <div class="ws-feature-right">
+                    <div class="feature-right-content">
+                        {{-- <h5 class="subtitle">Maid for you</h5> --}}
+                        <h3>Die Umwelt ist uns wichtig!</h3>
+                        <p>
+                        Für unser nachhaltiges Konzept stehen Hygiene, Keimschutz und Pflege an erster Stelle.
+                        Dabei legen wir großen Wert auf die biologische Abbaubarkeit und somit auf die
+                        Umweltverträglichkeit der von uns eingesetzten Reinigungsmittel.
+                        </p>
+                        <div class="box-content d-flex">
+                            
+                            <div class="inner-bc">
+                                <figure class="bc-icon">
+                                    <img src="{{asset('front-office/images/icons/blue-cleaning-tools.png')}}" alt="">
+                                </figure>
+                                <h4>Sauberkeit mit Zukunft – Clean-Buildings, grün reinigen!</h4>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HOME WIDE SECTION END -->
+
+    <!-- HOME SERVICE START -->
+    <div class="ws-parallax-services " style="background-image:url('{{asset('front-office/images/service-1.jpg')}}');">
+        <div class="container">
+            <div class="pc-center">
+                <div class="section-heading">
+                    <div class="row">
+                        <div class="col-10 col-md-6 mx-auto text-center mb-4">
+                            <h5 class="subtitle">WHY CHOOSE US</h5>
+                            <h2>Unsere Leistungen im Überblick</h2>
+                            <p>
+                            Wir bieten Ihnen ein großzügiges Spektrum an Dienstleistungen jeglicher Art.
+                            Unser freundliches Team erwartet Sie bereits, um Sie mit unserer zuverlässigen
+                            Gründlichkeit überzeugen zu können. Alle Serviceleistungen sind in individuell vereinbarten
+                            Intervallen buchbar.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="bs-carousel">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Unterhaltsreinigung</h4>
+                                <p>Unterhaltsreinigung: Regelmäßige Pflege für dauerhafte
+                                    Sauberkeit und ein angenehmes Umfeld.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-service-glass-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Glas- und Rahmenreinigung</h4>
+                                <p>Glas- und Rahmenreinigung bezeichnet die Pflege und
+                                    Säuberung von Fensterglas und Rahmen, um für eine klare Sicht und eine gepflegte
+                                    Erscheinung zu sorgen.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-cleaner.png')}}" alt="">
+                                </figure>
+                                <h4>Entrümplung</h4>
+                                <p>Entrümplung: Beseitigung von Unordnung und überflüssigen
+                                    Gegenständen für eine ordentliche Umgebung.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-cleaning-tools.png')}}" alt="">
+                                </figure>
+                                <h4>Grundreinigung</h4>
+                                <p>Grundreinigung: Intensive Reinigung für umfassende Sauberkeit,
+                                    auch in schwer erreichbaren Bereichen.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-vaccum-cleaner.png')}}" alt="">
+                                </figure>
+                                <h4>Fassadenreinigung</h4>
+                                <p> Fassadenreinigung verbessert das äußere Erscheinungsbild von
+                                    Gebäuden durch die Entfernung von Schmutz und Ablagerungen, schützt gleichzeitig
+                                    die Bausubstanz</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Endbaureinigung</h4>
+                                <p>Endbaureinigung: Abschließende Reinigung vor der
+                                    Gebäudeübergabe, um Baustaub und Schmutz zu entfernen.</p>
+                            </div>
+                        </div>
+                        <!--added-->
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Dachrinnenreinigung</h4>
+                                <p>Dachrinnenreinigung: Entfernung von Ablagerungen für eine
+                                    effektive Ableitung von Regenwasser und zum Schutz des Gebäudes.</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Winterdienst</h4>
+                                <p>Winterdienst" umfasst Maßnahmen wie Schneeräumung und
+                                    Streudienste, die darauf abzielen, Verkehrswege und Flächen im Winter sicher und
+                                    passierbar zu halten</p>
+                            </div>
+                        </div>
+                        <div class="item">
+                            <div class="ws-box-services">
+                                <figure class="ws-box-icon">
+                                    <img src="{{asset('front-office/images/icons/white-house-cleaning.png')}}" alt="">
+                                </figure>
+                                <h4>Treppenhausreinigung</h4>
+                                <p>Treppenhausreinigung" bezeichnet die regelmäßige Pflege
+                                    und Säuberung von Treppenaufgängen in Gebäuden, um eine gepflegte und sichere
+                                    Umgebung zu gewährleisten</p>
+                            </div>
+                        </div>
+
+                    </div>
+                   {{--  <div class="text-center mt-5 mb-5">
+                        <a href="{{route('services')}}" class="btn-washla btn-lg mt-3">See all services</a href="{{route('services')}}">
+                    </div> --}}
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="custom-nav owl-nav"></div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- HOME SERVICE END -->
+
+<!-- TESTIMONIALS START -->
+<div class="bg-wrapper ">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6 tl-layer">
+                <div class="about-testimonials">
+                    <h5>Testimonials</h5>
+                    <h2>Unsere Kundenzufriedenheit garantiert</h2>
+                    
+                </div>
+            </div>
+            <div class="col-lg-6 spacing-md">
+                <div class="testimonials-layer">
+                    <ul class="list-unstyled">
+                        <li class="media">
+                            
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1">Sarah </h5>
+                                <p>Clean-Buildings erfüllt unsere anspruchsvollen Anforderungen und beeindruckt mit hoher Servicequalität.</p>
+                            </div>
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </li>
+                        <li class="media">
+                            
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1">Mark </h5>
+                                <p>Clean-Buildings erhöht die Zufriedenheit unserer Mieter spürbar. Ihr diskretes und effizientes Team sorgt für ein angenehmes Wohnumfeld. Uneingeschränkte Empfehlung!</p>
+                            </div>
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </li>
+                        <li class="media">
+                            
+                            <div class="media-body">
+                                <h5 class="mt-0 mb-1">Lucas</h5>
+                                <p>Clean-Buildings ist ein vertrauenswürdiger Reinigungsdienstleister. Ihre gründliche und effiziente Arbeit hat die Sauberkeit unserer Gebäude verbessert. Klare Empfehlung!</p>
+                            </div>
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-right"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- TESTIMONIALS END -->
+
+    <!-- VIDEO POPUP START -->
+    <div class="wp-pop-counter ">
+        <div class="pop-counter-content">
+            <div class="btn-popup d-flex justify-content-center">
+                <a class="popup-youtube" href="https://www.youtube.com/watch?v=48vawUlO7ag&pp=ygURY2xlYW5pbmcgYnVpbGRpbmc%3D">
+                    <div class="pulse"><i class="fas fa-play"></i></div>
+                </a>
+            </div>
+            {{-- <p>Cleaning your Worries Away</p> --}}
+            <h2>Fordern Sie hier ein kostenloses Angebot an</h2>
+            <a href="{{route('contact')}}" class="btn-washla btn-lg mt-3">Angebot anfordern</a>
+        </div>
+    </div>
+    <!-- VIDEO POPUP END -->
+
+
+
+</section>
+<!-- CONTENT END -->
+@endsection
+
+@section('js')
+<script>
+if (window.innerWidth < 768) {
+  $('.flickity-enabled').flickity('unbindDrag');
+}
+
+</script>
+@endsection

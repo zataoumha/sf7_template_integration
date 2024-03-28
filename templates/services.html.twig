@@ -1,0 +1,163 @@
+@extends('layouts.base_normal')
+@section('slider')
+@extends('layouts.variables.hero_services')
+@endsection
+@section('title')
+GEBAUDESERVICES | Services
+@endsection
+@section('body')
+ <!-- CONTENT START -->
+ <section>
+    <!-- SERVICE START -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <a href="{{ route('details', ['id' => 1]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-1.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/white-cleaning-tools.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Unterhaltsreinigung</h4>
+                            <p>Homes and thoroughly launder them between usage, We give our teams the accusantium
+                                doloremque laudantium. </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 2]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-2.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/white-service-glass-cleaning.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Glas- und Rahmenreinigung</h4>
+                            <p>We are closely monitoring national, state and local health agencies for the most
+                                recent developments. </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 3]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-3.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/white-cleaning.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Entrümplung</h4>
+                            <p>Follow these tips from the CDC to help prevent the spread of the seasonal flu and
+                                respiratory diseases. </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 4]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-4.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/white-vaccum-cleaner.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Grundreinigung</h4>
+                            <p>Cleanliness plays a large role in the comfort of your home, but many homeowners
+                                simply don’t have. </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 6]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-5.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/sponge.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Endbaureinigung</h4>
+                            <p>We realize that every family has their own preferences, so we accommodate all your
+                                specific requests into. </p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 9]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-6.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Dachrinnenreinigung</h4>
+                            <p>While some cleaning companies use rotating cleaning plans, we’re equipped to clean
+                                your entire house.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 7]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/carosel-1.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Winterdienst</h4>
+                            <p>While some cleaning companies use rotating cleaning plans, we’re equipped to clean
+                                your entire house.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+            <a href="{{ route('details', ['id' => 8]) }}" class="col-md-6 col-lg-4">
+                <div class="sb-washla">
+                    <figure class="sb-thumbail"><img src="{{asset('front-office/images/service-2.jpg')}}" alt=""></figure>
+                    <div class="sb-caption">
+                        <div class="sb-inner-caption">
+                            <div class="sb-circle-layer-costum" id="circle-layer">
+                                <figure class="sb-center-icon">
+                                    <img src="{{asset('front-office/images/icons/happy-white.png')}}" alt="">
+                                </figure>
+                                <h5 class="info-link">More info</h5>
+                            </div>
+                            <h4>Treppenhausreinigung</h4>
+                            <p>While some cleaning companies use rotating cleaning plans, we’re equipped to clean
+                                your entire house.</p>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- SERVICE END -->
+</section>
+<!-- CONTENT END -->
+@endsection

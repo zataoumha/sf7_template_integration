@@ -1,0 +1,149 @@
+@extends('layouts.base_normal')
+@section('slider')
+@extends('layouts.variables.hero_contact')
+@endsection
+@section('title')
+GEBAUDESERVICES | Contact
+@endsection
+@section('body')
+<!-- CONTENT START -->
+<section>
+    <!-- CONTACT BOX START -->
+    <div class="bg-wrapper contact-wrapper mb-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4">
+                    <div class="cw-box">
+                        <figure class="cw-icon">
+                            <img src="{{asset('front-office/images/icons/placeholder.png')}}" alt="">
+                        </figure>
+                        <p>Krablerstraße 12745326 Essen</p>
+                    </div>
+                </div>
+                <div class="col-lg-4 spacing-m-center">
+                    <div class="cw-box">
+                        <figure class="cw-icon">
+                            <img src="{{asset('front-office/images/icons/telephone.png')}}" alt="">
+                        </figure>
+                        <p>0176 633 069 20</p>
+
+                    </div>
+                </div>
+                <div class="col-lg-4">
+                    <div class="cw-box">
+                        <figure class="cw-icon">
+                            <img src="{{asset('front-office/images/icons/email.png')}}" alt="">
+                        </figure>
+                        <p>info@clean-buildings.de</p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT BOX END -->
+
+    <!-- CONTACT FORM START -->
+
+    <div class="container mt-5 mb-5">
+
+        <div class="row">
+            <div class="col-md-8 mx-auto">
+               
+
+                <br/>
+                @if(session('success'))
+                    <div class="alert alert-success">
+                        {{ session('success') }}
+                    </div>
+                @endif
+                @if(session('error'))
+                    <div class="alert alert-danger">
+                        {{ session('error') }}
+                    </div>
+                @endif
+
+                <br/>
+                <form id="contact-form" method="POST" action="{{ route('sendMail') }}">
+                    @csrf
+                    <div class="messages"></div>
+                    <div class="controls">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_name" type="text" name="fname" class="form-control custom-form" placeholder="*Vorname" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_name" type="text" name="lname" class="form-control custom-form" placeholder="*Nachname" required="required" data-error="Firstname is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_email" type="email" name="email" class="form-control custom-form" placeholder="*E-Mail " required="required" data-error="Valid email is required.">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_phone" type="tel" name="phone" class="form-control custom-form" placeholder="*Telefonnummer">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_phone" type="tel" name="location" class="form-control custom-form" placeholder="*Stadt">
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="form-group">
+                                    <input id="form_phone" type="tel" name="company" class="form-control custom-form" placeholder="Unternehmen">
+
+                                </div>
+                            </div>
+                            <div class="col-sm-12">
+                                <div class="form-group">
+                                    <textarea id="form_message" name="message" class="form-control message-form custom-form" placeholder="*Ihr Anliegen" rows="6" required="required" data-error="Please,leave us a message."></textarea>
+                                    <div class="help-block with-errors"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <br/>
+
+                            <div>
+                                <input type="checkbox" class=" " name="" id="prv" required>
+                                <label for="prv"><a href="{{route('privacy')}}"> Ich akzeptiere die allgemeinen Geschäftsbedingungen</a></label>
+
+                                <div class="help-block with-errors"></div>
+                            </div>
+
+                        <div class="row">
+
+                            <div class="col-md-12 btn-send">
+                                <button type="submit" name="send-m" class="btn btn-washla">Anfragen absenden</button>
+                            </div>
+                            <div class="col-sm-12">
+                                <p class="required">
+                                    * Diese Felder sind erforderlich.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- CONTACT FORM END -->
+
+    <!-- MAP START -->
+    <div class="bottom-map">
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d159164.81527458012!2d6.70420207945798!3d51.44070773832367!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47b8c2b796abf639%3A0x6a00e111a4ad2c9d!2sEssen%2C%20Allemagne!5e0!3m2!1sfr!2sma!4v1684668896967!5m2!1sfr!2sma" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
+    <!-- MAP END -->
+</section>
+<!-- CONTENT END -->
+@endsection

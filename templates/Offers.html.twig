@@ -1,0 +1,74 @@
+@extends('layouts.base_normal')
+@section('slider')
+@extends('layouts.variables.hero_hiring')
+@endsection
+@section('title')
+GEBAUDESERVICES | Offers
+@endsection
+@section('body')
+<!-- CAROUSEL INFO SECTION START -->
+<div class="container mt-5">
+    <div class="cover-feature">
+        <div class="row" style="height: 44em !important;">
+            <div class="col-lg-5">
+                <div class="gallery-carousel">
+                    <div class="owl-carousel owl-theme">
+                        <div class="item">
+                            <div class="gallery-slider-bg"
+                                style="background-image:url({{asset('front-office/images/carosel-1.jpg')}});"></div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-slider-bg"
+                                style="background-image:url({{asset('front-office/images/carousel-2.jpg')}});"></div>
+                        </div>
+                        <div class="item">
+                            <div class="gallery-slider-bg"
+                                style="background-image:url({{asset('front-office/images/carousel-3.jpg')}});"></div>
+                        </div>
+                    </div>
+                    <div class="owl-theme">
+                        <div class="owl-controls">
+                            <div class="custom-nav owl-nav"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-7">
+                <div class="cf-content">
+                    <h2>Bewerbe dich bei Clean Buildings! </h2>
+                    <p>
+                        Wir suchen dich, um unser Team zu verstärken.
+                        Du hast Freude daran, anderen Menschen mit Sauberkeit und Ordnung den Tag zu erleichtern? Dann
+                        bist du bei uns genau richtig.
+                        Wir bei Clean Buildings legen sehr viel Wert auf eine harmonische und gute Arbeitsatmosphäre, um
+                        professionell und zielführend zusammenzuarbeiten.
+                    </p>
+                    <h3>Warum wir?</h3>
+                    <div class="order-list d-flex">
+                        <ul class="ol-left">
+                            <li>aufgeschlossenes und professionelles Arbeitsklima</li>
+                            <li> Weiterbildungsmöglichkeiten und Schulungen</li>
+                        </ul>
+                        <ul class="ol-right">
+                            <li>individuelle Entwicklungsgespräche</li>
+                            <li>flexible Einsatzmöglichkeiten
+                            </li>
+                        </ul>
+                    </div>
+                    <h3>Wie bewirbst du dich? </h3>
+                    <p>
+                        Wir freuen uns darauf, talentierte und motivierte Menschen in unserem Team willkommen zu
+                        heißen. Kontaktieren Sie uns per E-Mail unter <strong> karriere@clean-buildings.de</strong> oder rufe uns
+                        unter der nachfolgenden Rufnummer an <strong> 017663306920</strong>, um den ersten Schritt in Ihre
+                        berufliche Zukunft mit Clean-Buildings zu machen.
+
+                    </p>
+
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- CAROUSEL INFO SECTION END -->
+@endsection
