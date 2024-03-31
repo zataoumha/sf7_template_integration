@@ -1,20 +1,97 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello WordingController!{% endblock %}
+{% block title %}Wording{% endblock %}
+
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard /</span> Wording</h4>
+                </div>
+              {% include 'partials/flash.html.twig' %}
+            </div>
+            <div class="content-wrapper">
+            <div class="row mb-5">
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Home page content</h5>
+                      <p class="card-text">Update home page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">Manage</a>
+                    </div>
+                  </div>
+                </div>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">About us page content</h5>
+                      <p class="card-text">Update about us page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">Manage</a>
+                    </div>
+                  </div>
+                </div>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/mouataz/formation/sf7_template_integration/src/Controller/WordingController.php</code></li>
-        <li>Your template at <code>/home/mouataz/formation/sf7_template_integration/templates/wording/index.html.twig</code></li>
-    </ul>
-</div>
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Services page content</h5>
+                      <p class="card-text">Update services page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Service details page content</h5>
+                      <p class="card-text">Update service details page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Hiring page content</h5>
+                      <p class="card-text">Update hiring page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Contact page content</h5>
+                      <p class="card-text">Update contact page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Privacy page content</h5>
+                      <p class="card-text">Update privacy page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+
+                 <div class="col-md-6 col-lg-4">
+                  <div class="card text-center mb-3">
+                    <div class="card-body">
+                      <h5 class="card-title">Impressum page content</h5>
+                      <p class="card-text">Update impressum page content and its translation</p>
+                      <a href="javascript:void(0)" class="btn btn-primary">manage</a>
+                    </div>
+                  </div>
+                </div>
+                
+              </div>
+            </div>
 {% endblock %}

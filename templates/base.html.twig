@@ -36,6 +36,7 @@
         {% block javascripts %}
             {% block importmap %}{{ importmap('app') }}{% endblock %}
         {% endblock %}
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
   </head>
 
   <body>
@@ -150,11 +151,23 @@
                 <div data-i18n="Analytics">Wording</div>
               </a>
             </li>
-            <li class="menu-item {{ app.current_route starts with 'app.translations' ? 'active' : '' }} ">
-              <a href="" class="menu-link">
-                <i class="menu-icon tf-icons bx bx-world"></i>
-                <div data-i18n="Analytics">Translation</div>
+            <li class="menu-item " style="">
+              <a href="javascript:void(0);" class="menu-link menu-toggle">
+                <i class="menu-icon tf-icons bx bx-store-alt"></i>
+                <div data-i18n="Misc">Store</div>
               </a>
+              <ul class="menu-sub">
+                <li class="menu-item">
+                  <a href="pages-misc-error.html" class="menu-link">
+                    <div data-i18n="Error">Categories</div>
+                  </a>
+                </li>
+                <li class="menu-item">
+                  <a href="pages-misc-under-maintenance.html" class="menu-link">
+                    <div data-i18n="Under Maintenance">Products</div>
+                  </a>
+                </li>
+              </ul>
             </li>
           </ul>
         </aside>
@@ -259,7 +272,7 @@
                   <script>
                     document.write(new Date().getFullYear());
                   </script>
-                  , Created by <a href="https://linkedin.com/in/mouataz-hakkou">Hakkou Mouataz</a>
+                  , Created by <a href="https://linkedin.com/in/mouataz-hakkou">Clean Buildings</a>
                 </div>
               </div>
             </footer>

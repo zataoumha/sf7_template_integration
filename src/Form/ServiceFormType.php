@@ -24,8 +24,11 @@ class ServiceFormType extends AbstractType
             ->add('title', TextType::class, [
                 'label'=>'Title'
             ])
-            ->add('slug', TextType::class)
+            ->add('slug', TextType::class, [
+                'required'=>false
+            ])
             ->add('description', TextareaType::class)
+            ->add('Quote', TextareaType::class)
             ->add('image', FileType::class, [
                 'mapped' => false,
                 'required' => true,

@@ -1,20 +1,238 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello SettingsController!{% endblock %}
+{% block title %}Settings{% endblock %}
 
 {% block body %}
-<style>
-    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
-    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
-</style>
+<div class="content-wrapper">
+            <!-- Content -->
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <h4 class="fw-bold py-3 mb-4">
+                <span class="text-muted fw-light">Dashboard /</span> Settings
+              </h4>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code>/home/mouataz/formation/sf7_template_integration/src/Controller/SettingsController.php</code></li>
-        <li>Your template at <code>/home/mouataz/formation/sf7_template_integration/templates/settings/index.html.twig</code></li>
-    </ul>
-</div>
+              <div class="row">
+              <h5 class="card-header">Website settings</h5>
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website Name*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="text" id="sitename" class="form-control" name="sitename" placeholder="Website name" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website Logo*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitelogo" class="form-control" name="sitelogo" placeholder="Website logo" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website email*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="siteemail" class="form-control" name="siteemail" placeholder="Website email" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website hiring phone number*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitehiringphone" class="form-control" name="sitehiringphone" placeholder="Website hiring phone number" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                   
+                    <div class="card-body">
+                      <h6>Website phone*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitephone" class="form-control" name="sitephone" placeholder="Website phone" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website hiring email*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitehiringemail" class="form-control" name="sitehiringemail" placeholder="Website hiring email" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Website address*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="siteaddress" class="form-control" name="siteaddress" placeholder="Website address" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+               <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Tiktok link*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitetiktok" class="form-control" name="sitetiktok" placeholder="Tiktok link" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Facebook link*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="sitefb" class="form-control" name="sitefb" placeholder="Facebook link" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <hr class="container-m-nx border-light my-5">
+              <div class="row mt-3">
+                <div class="col-md-12">
+                  <div class="card">
+                    <!-- Notifications -->
+                    
+                    <div class="card-body">
+                      <h6>Instagram link*</h6>
+                      <form action="javascript:void(0);">
+                        <div class="row">
+                          <div class="col-sm-6">
+                            <input type="file" id="siteinstagram" class="form-control" name="siteinstagram" placeholder="Instagram link" required>
+                          </div>
+                          <div class="mt-4">
+                            <button type="submit" class="btn btn-primary me-2">Update</button>
+                          </div>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- / Content -->
+            <div class="content-backdrop fade"></div>
+          </div>
 {% endblock %}

@@ -1,0 +1,38 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Messages{% endblock %}
+
+
+{% block body %}
+            <div class="container-xxl flex-grow-1 container-p-y">
+              <div class="d-flex justify-content-between align-items-center">
+                    <h4 class="fw-bold py-3 mb-4"><span class="text-muted fw-light">Dashboard / Messages /</span> Details</h4>
+                    <a href="{{path('app.messages')}}" class="btn btn-info"><i class="bx bx-arrow-back me-1"></i></a>
+                </div>
+              {% include 'partials/flash.html.twig' %}
+              <div class="card">
+              
+                <div class="table-responsive text-nowrap">
+                <div class="card">
+                    <div class="card-body">
+                    <p>Name : {{message.senderFname }} {{message.senderLname}}</p>
+                    <p>Email : {{message.senderEmail}}</p>
+                    <p>Phone Number : {{message.phoneNumber}}</p>
+                    <p>City : {{message.city}}</p>
+                    <p>Company : {{message.company}}</p>
+                    <p>Subject : {{message.subject}}</p>
+                    <p>Sent At : {{message.createdAt | date()}}</p>
+                    <p>Message : <br/>
+                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" disabled >{{message.content}}</textarea>
+                    
+                    </p>
+
+                    
+                                            
+                    </div>
+                </div>
+                 
+                </div>
+              </div>
+            </div>
+{% endblock %}

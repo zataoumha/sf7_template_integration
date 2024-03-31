@@ -2,15 +2,21 @@
 
 namespace App\Controller;
 
+use App\Entity\Message;
+use App\Form\ContactFormType;
+use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
 
 class MainController extends AbstractController
 {
     #[Route('/', name: 'app.main')]
-    public function index(): Response
+    public function index(Request $request): Response
     {
+        /* $locale = $request->getLocale();
+        dd($locale); */
         return $this->render('home/home.html.twig');
     }
 
@@ -19,11 +25,20 @@ class MainController extends AbstractController
     {
         return $this->render('home/about.html.twig');
     }
-
     #[Route('/contact', name: 'app.contact')]
-    public function contact(): Response
+    public function contact(Request $request, EntityManagerInterface $em): Response
     {
-        return $this->render('home/contact.html.twig');
+        $message = new Message();
+        $form = $this->createForm(ContactFormType::class);
+        $form->handleRequest($request);
+        if($form->isSubmitted() && $form->isValid()){
+            $message = $form->getData();
+            $em->persist($message);
+            $em->flush();
+            $this->addFlash('success','message sent successfully, we will contact you as soon as possible !');
+            return $this->redirectToRoute('app.contact');
+        }
+        return $this->render('home/contact.html.twig', ['form'=>$form]);
     }
 
     #[Route('/impersum', name: 'app.impersum')]

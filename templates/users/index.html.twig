@@ -30,24 +30,17 @@
                         <td>{{user.lastName}}</td>
                         <td>{{user.email}}</td>
                         <td>
-                            <div class="form-check form-switch">
-                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" {{user.isActivated ? 'checked': '' }}>
+                          <div class="form-check form-switch">
+                                <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault" data-id="{{user.id}}"  checked>
                                 <label class="form-check-label" for="flexSwitchCheckDefault">
-                                <span class="badge bg-label-{{user.isActivated ? "success":"danger"}} me-1">{{user.isActivated ? "Active":"Blocked"}}</span>
-                                </label>
-                            </div>
-                        </td>
-                        <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="{{path('app.users.show', {user:user.id})}}"><i class="bx bx-show-alt me-1 text-success"></i> Show</a>
-                              <a class="dropdown-item" href="{{path('app.users.update', {user:user.id})}}"><i class="bx bx-edit-alt me-1 text-warning"></i> Edit</a>
-                              <a class="dropdown-item" id="delete-user"  href="{{path('app.users.delete', {user:user.id})}}"><i class="bx bx-trash me-1 text-danger"></i> Delete</a>
-                            </div>
+                                <span class="badge bg-label-danger me-1" id="span"></span>
+                              </label>
                           </div>
+                        </td>
+                        <td class="d-flex">
+                            <a class="btn" href="{{path('app.users.show', {user:user.id})}}"><i class="bx bx-show-alt me-1 text-success"></i> </a>
+                            <a class="btn" href="{{path('app.users.update', {user:user.id})}}"><i class="bx bx-edit-alt me-1 text-warning"></i> </a>
+                            <a class="btn" id="delete-user"  href="{{path('app.users.delete', {user:user.id})}}"><i class="bx bx-trash me-1 text-danger"></i> </a>
                         </td>
                       </tr>
                     {% endfor %}

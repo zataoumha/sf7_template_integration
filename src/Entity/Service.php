@@ -17,7 +17,7 @@ class Service
     #[ORM\Column(length: 255)]
     private ?string $title = null;
 
-    #[ORM\Column(length: 500)]
+    #[ORM\Column(length: 500, nullable: true)]
     private ?string $slug = null;
 
     #[ORM\Column(type: Types::TEXT)]
@@ -37,6 +37,9 @@ class Service
 
     #[ORM\Column]
     private ?bool $isArchived = null;
+
+    #[ORM\Column(type: Types::TEXT, nullable: true)]
+    private ?string $quote = null;
 
     public function getId(): ?int
     {
@@ -135,6 +138,18 @@ class Service
     public function setIsArchived(bool $isArchived): static
     {
         $this->isArchived = $isArchived;
+
+        return $this;
+    }
+
+    public function getQuote(): ?string
+    {
+        return $this->quote;
+    }
+
+    public function setQuote(?string $quote): static
+    {
+        $this->quote = $quote;
 
         return $this;
     }

@@ -20,6 +20,7 @@ import './scripts/js/main.js';
 //import './scripts/js/dashboards-analytics.js';
 import './scripts/js/sweetalert2.all.min.js';
 import './scripts/alerts.js';
+//import {Swal} from './scripts/js/sweetalert2.all.min.js';
 
 
 import './scripts/users.js';

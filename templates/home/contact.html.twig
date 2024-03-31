@@ -51,20 +51,56 @@
                
 
                 <br/>
-                @if(session('success'))
-                    <div class="alert alert-success">
-                        {{ session('success') }}
-                    </div>
-                @endif
-                @if(session('error'))
-                    <div class="alert alert-danger">
-                        {{ session('error') }}
-                    </div>
-                @endif
+               {% include 'partials/flash.html.twig' %}
 
                 <br/>
-                <form id="contact-form" method="POST" action="{{ route('sendMail') }}">
-                    @csrf
+                {{ form_start(form, {'attr': {'id': 'contact-form'}}) }}
+
+    <div class="messages"></div>
+    <div class="controls">
+        <div class="row">
+            <div class="col-sm-6">
+                {{ form_row(form.senderFname) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.senderLname) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.senderEmail) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.phoneNumber) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.city) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.company) }}
+            </div>
+            <div class="col-sm-6">
+                {{ form_row(form.subject) }}
+            </div>
+            <div class="col-sm-12">
+                {{ form_row(form.content) }}
+            </div>
+
+        </div>
+        <br/>
+        <div class="row">
+            <div class="col-md-12 btn-send">
+                <button type="submit" name="send-m" class="btn btn-washla">Anfragen absenden</button>
+            </div>
+            <div class="col-sm-12">
+                <p class="required">
+                    * Diese Felder sind erforderlich.
+                </p>
+            </div>
+        </div>
+    </div>
+
+{{ form_end(form) }}
+                {# <form id="contact-form" method="POST" action="">
+                   
                     <div class="messages"></div>
                     <div class="controls">
                         <div class="row">
@@ -115,7 +151,7 @@
 
                             <div>
                                 <input type="checkbox" class=" " name="" id="prv" required>
-                                <label for="prv"><a href="{{route('privacy')}}"> Ich akzeptiere die allgemeinen Geschäftsbedingungen</a></label>
+                                <label for="prv"><a href="{{path('app.privacy')}}"> Ich akzeptiere die allgemeinen Geschäftsbedingungen</a></label>
 
                                 <div class="help-block with-errors"></div>
                             </div>
@@ -132,7 +168,7 @@
                             </div>
                         </div>
                     </div>
-                </form>
+                </form> #}
             </div>
         </div>
     </div>
@@ -145,4 +181,4 @@
     <!-- MAP END -->
 </section>
 <!-- CONTENT END -->
-@endsection
+{% endblock %} 

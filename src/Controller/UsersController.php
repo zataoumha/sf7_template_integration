@@ -7,6 +7,7 @@ use App\Form\UserFormType;
 use App\Repository\UserRepository;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -68,13 +69,18 @@ class UsersController extends AbstractController
         return $this->redirectToRoute('app.users.index');  
     }
 
-    #[Route('/users/state/{user}', name: 'app.users.state')]
-    public function state(EntityManagerInterface $em, Request $request, User $user): Response
+    #[Route('/users/state', name: 'app.users.state')]
+    public function state(EntityManagerInterface $em, Request $request, UserRepository $repo): JsonResponse
     {
-        $user->setIsActivated(!$user->isIsActivated());
+        $user = $repo->find($request->get('userId'));
+        $message = '';
+         $user->setIsActivated(!$user->isIsActivated());
         $em->persist($user);
-        $em->flush();
-        return $this->redirectToRoute('app.users.index');
+        $user->isIsActivated() ? $message = "Account activated" : $message = "Account blocked";
+        $em->flush(); 
+        return new JsonResponse([
+            'message' => $message,
+        ], 200);
     }
 
     #[Route('/users/show/{user}', name: 'app.users.show')]

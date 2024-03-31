@@ -29,17 +29,12 @@
                         <td>{{service.updatedAt ? service.updatedAt | date('d/m/Y') : '-'}}</td>
                         <td><span class="badge bg-label-primary me-1">{{service.status}}</span></td>
                         <td>
-                          <div class="dropdown">
-                            <button type="button" class="btn p-0 dropdown-toggle hide-arrow" data-bs-toggle="dropdown">
-                              <i class="bx bx-dots-vertical-rounded"></i>
-                            </button>
-                            <div class="dropdown-menu">
-                            <a class="dropdown-item" href="javascript:void(0);"><i class="bx bx-show-alt me-1 text-success"></i> Show</a>
-                              <a class="dropdown-item" href="{{path('app.services.update', {service:service.id})}}"><i class="bx bx-edit-alt me-1 text-warning"></i> Edit</a>
-                              <a class="dropdown-item" id="delete-service"  href="{{path('app.services.delete', {service:service.id})}}"><i class="bx bx-trash me-1 text-danger"></i> Delete</a>
-                              <a class="dropdown-item" href="{{path('app.services.archive', {service:service.id})}}"><i class="bx bx-archive me-1 text-info"></i> Unarchive</a>
-                            </div>
-                          </div>
+                          <td class="d-flex  flex-row-reverse">
+                          <a class="btn" href="{{path('app.services.show', {service:service.id})}}" title="Show Details"><i class="bx bx-show-alt me-1 text-success"></i> </a>
+                              <a class="btn" href="{{path('app.services.update', {service:service.id})}}" title="Update service"><i class="bx bx-edit-alt me-1 text-warning"></i> </a>
+                              <a class="btn" id="delete-service"  service-id="{{service.id}}"  title="Delete service"><i class="bx bx-trash me-1 text-danger"></i> </a>
+                              <a class="btn" id="archive-service" service-id="{{service.id}}" action-text="unarchive" title="Archive service"><i class="bx bx-archive me-1 text-info"></i> </a>
+                        </td>
                         </td>
                       </tr>
                     {% endfor %}

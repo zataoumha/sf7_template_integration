@@ -9,16 +9,138 @@
         <a href="{{path('app.services.index')}}" class="btn btn-info"><i class="bx bx-arrow-back me-1"></i></a>
     </div>
 
-    <h1 class="text-center py-3">{{service.title}}</h1>
+    <section>
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <!-- BLOG CONTENT START -->
+            <div class="col-lg-12">
+                <div class="blog-content">
+                    <figure class="post-image">
+                    <img class="px-5" src="{{asset('services_images/')}}{{service.image}}" style="width: 85em; height: 500px;" alt="{{service.title}}">
+                    </figure>
+                    <div class="post-content">
+                        <h2 class="post-title">{{service.title}}</h2>
+                        <p style="font-size: 18px;">
+                            {{service.description}}
+                        </p>
+                        <blockquote class="ludwig">
+                        <h4>Sie wünschen...</h4>
+                        <br/>
+                            {{service.quote}}
+                        </blockquote>
+                        {# {{-- <p>vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium
+                            voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+                            occaecati cupiditate non provident, similique sunt in culpa qui officia deserunt
+                            mollitia animi, id est laborum et dolorum fuga.
+                        </p> 
+                        <h5>We are located on :</h5>
+                        <p>
+                            @foreach ($cities as $city)
+                               {{$city}} @if (!$loop->last),@endif
+                            @endforeach.
+                        </p>--}} #}
+                        <h5 class="mt-5 mb-5">Mit unserem 4 Stufen System stellen wir Ihre Reinigung sicher</h5>
+                        <div id="accordion">
+                            <div class="card mb-3">
+                              <div class="card-header" id="headingOne">
+                                <h5 class="mb-0">
+                                  <button class="btn btn-link text-bold " data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne" style="color:orange;">
+                                    1. Schritt: Individuelle Analyse
+                                  </button>
+                                </h5>
+                              </div>
+                          
+                              <div id="collapseOne" class="collapse " aria-labelledby="headingOne" data-parent="#accordion">
+                                <div class="card-body">      
+                                    Dabei fangen wir als erstes mit einer individuellen Analyse vor Ort an, bei der die tiefgehenden Kundenbedürfnisse ermittelt werden, sodass wir 100%-ige Klarheit haben.
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-header" id="headingTwo">
+                                <h5 class="mb-0">
+                                  <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo" style="color:orange;">
+                                    2. Schritt: Vorbereitungsphase
+                                  </button>
+                                </h5>
+                              </div>
+                              <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                                <div class="card-body">
+                                Im nächsten Schritt geht es darum alle Ressourcen so auszulegen, dass die Reinigung maximal zufriedenstellend durchgeführt wird. Dazu zählt natürlich auch der Service sowie entsprechend geschultes Personal, das unter anderem Deutsch spricht.
+                                <ul>
+                                    <li>Einsatz von hygienegeschultem Personal</li>
+                                    <li>Ausstattung von geprüftem Material </li>
+                                </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                              <div class="card-header" id="headingThree">
+                                <h5 class="mb-0">
+                                  <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree" style="color:orange;">
+                                   3. Schritt Durchführungphase
+                                  </button>
+                                </h5>
+                              </div>
+                              <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                                <div class="card-body">
+                                    Wir arbeiten nach einem Farbcode. Dadurch erzielen wir in allen Räumen materialgerechte Sauberkeit. Auch verhindert das präzise Einhalten des Farbsystems mögliche Fehlreinigungen auf unterschiedlichen Materialien. Durch die strikte Befolgung der Codes gewährleisten wir den Werterhalt Ihrer Möbel und Flächen ohne Ausnahmen.
+
+                                    Selbst bei vorübergehendem Wechsel des Reinigungspersonals durch Urlaub oder Krankheit von Mitarbeitern arbeitet das Ersatzpersonal nach dem gleichen Ablauf und Farbcode. Damit erreichen wir unsere hohen Hygienestandards und Sie können sich zurücklehnen.
+                                    <ul>
+                                        <li>Arbeiten nach Hygieneplan</li>
+                                        <li>Arbeiten mit eigenem 5-Farbsystem</li>
+                                    </ul>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="card mb-3">
+                                <div class="card-header" id="headingFoure">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFoure" aria-expanded="false" aria-controls="collapseThree" style="color:orange;">
+                                        4. Schritt Feedbacksystem
+                                    </button>
+                                  </h5>
+                                </div>
+                                <div id="collapseFoure" class="collapse" aria-labelledby="headingFoure" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Nach der erfolgreichen Durchführung des Auftrags startet unser Feedbacksystem, das dafür sorgt, dass in regelmäßigen Abständen die Zufriedenheit unserer Kunden geprüft wird und bei neuen Wünschen nachgesorgt werden kann, um Sie zu 100% zufrieden zu stellen.
+                                        <ul>
+                                            <li>Kontrollen durch qualifizierte Objektleiter</li>
+                                            <li>Sicherheit durch ein qualifiziertes QS-System</li>
+                                        </ul>    
+                                    </div>
+                                </div>
+                              </div>
+                              <div class="card mb-3">
+                                <div class="card-header" id="headingFive">
+                                  <h5 class="mb-0">
+                                    <button class="btn btn-link collapsed" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseThree" style="color:orange;"> 
+                                      5.  Das Ergebnis
+                                    </button>
+                                  </h5>
+                                </div>
+                                <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                                    <div class="card-body">
+                                        Das Ergebnis ist, dass Sie durch die neue Zusammenarbeit mit uns und unserem System einen Reinigungspartner gewinnen werden, welcher Ihre Zufriedenheit wirklich an 1. Stelle stehen hat.
+                                    </div>
+                                </div>
+                              </div>
+                          </div>
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+   {#  <h1 class="text-center py-3">{{service.title}}</h1>
     <div class="d-flex ">
-        <img class="px-5" src="{{asset('services_images/')}}{{service.image}}" alt="">
+        <img class="px-5" src="{{asset('services_images/')}}{{service.image}}" style="width: 50em; height: 500px;" alt="{{service.title}}">
         
         <div class="row">
             <p>
             {{service.description}}
             </p>
-            
-            
         </div>
         
     </div>
@@ -27,7 +149,7 @@
         {% if service.updatedAt %}
         Updated At : {{service.UpdatedAt |date}}
         {% endif %}
-    </p>
+    </p> #}
 </div>
 
 {% endblock %}

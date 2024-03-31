@@ -9,6 +9,7 @@ use App\Service\FileUploader;
 use App\Service\UploaderService;
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Attribute\Route;
@@ -75,18 +76,22 @@ class ServicesController extends AbstractController
         ]);
     }
 
-    #[Route('/services/delete/{service}', name: 'app.services.delete')]
-    public function delete(Request $request, Service $service, EntityManagerInterface $em): Response
+    #[Route('/services/delete', name: 'app.services.delete')]
+    public function delete(Request $request, ServiceRepository $repo, EntityManagerInterface $em): JsonResponse
     {
+        $service = $repo->find($request->get('id'));
         $em->remove($service);
         $em->flush();
         $this->addFlash('success','Service removed successfully !');
-        return $this->redirectToRoute('app.services.index');
+        return new JsonResponse([
+            'message' => "Service Deleted",
+        ], 200);
     }
 
-    #[Route('/services/archive/{service}', name: 'app.services.archive')]
-    public function archive(Request $request, Service $service, EntityManagerInterface $em): Response
+    #[Route('/services/archive', name: 'app.services.archive')]
+    public function archive(Request $request, ServiceRepository $repo, EntityManagerInterface $em): Response
     {
+        $service = $repo->find($request->get('id'));
         if($service->isIsArchived()){
             $service->setIsArchived(false);
             $this->addFlash('success','Service removed from archive !');
