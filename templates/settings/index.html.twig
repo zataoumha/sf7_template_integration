@@ -13,16 +13,17 @@
 
               <div class="row">
               <h5 class="card-header">Website settings</h5>
+              {% include 'partials/flash.html.twig' %}
                 <div class="col-md-12">
                   <div class="card">
                     <!-- Notifications -->
                     
                     <div class="card-body">
                       <h6>Website Name*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.name')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="text" id="sitename" class="form-control" name="sitename" placeholder="Website name" required>
+                            <input type="text" id="sitename" class="form-control" name="sitename" placeholder="Website name" value="{{params ? params.name : ''}}" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -41,10 +42,10 @@
                     
                     <div class="card-body">
                       <h6>Website Logo*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.logo')}}" method="POST" enctype="multipart/form-data">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitelogo" class="form-control" name="sitelogo" placeholder="Website logo" required>
+                            <input type="file" id="sitelogo" class="form-control" name="sitelogo" value="{{params ? params.logo : ''}}" placeholder="Website logo" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -63,10 +64,10 @@
                     
                     <div class="card-body">
                       <h6>Website email*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.email')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="siteemail" class="form-control" name="siteemail" placeholder="Website email" required>
+                            <input type="email" id="siteemail" class="form-control" name="siteemail"  value="{{params ? params.email : ''}}"placeholder="Website email" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -85,10 +86,10 @@
                     
                     <div class="card-body">
                       <h6>Website hiring phone number*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.hiringPhone')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitehiringphone" class="form-control" name="sitehiringphone" placeholder="Website hiring phone number" required>
+                            <input type="tel" id="sitehiringphone" class="form-control" name="sitehiringphone" value="{{params ? params.hiringPhone : ''}}" placeholder="Website hiring phone number" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -107,10 +108,10 @@
                    
                     <div class="card-body">
                       <h6>Website phone*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.phone')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitephone" class="form-control" name="sitephone" placeholder="Website phone" required>
+                            <input type="tel" id="sitephone" class="form-control" name="sitephone" value="{{params ? params.phone : ''}}" placeholder="Website phone" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -129,10 +130,10 @@
                     
                     <div class="card-body">
                       <h6>Website hiring email*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.hiringemail')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitehiringemail" class="form-control" name="sitehiringemail" placeholder="Website hiring email" required>
+                            <input type="email" id="sitehiringemail" class="form-control" name="sitehiringemail" value="{{params ? params.horigEmail : ''}}" placeholder="Website hiring email" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -151,10 +152,10 @@
                     
                     <div class="card-body">
                       <h6>Website address*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.address')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="siteaddress" class="form-control" name="siteaddress" placeholder="Website address" required>
+                            <input type="text" id="siteaddress" class="form-control" name="siteaddress" value="{{params ? params.address : ''}}" placeholder="Website address" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -173,10 +174,10 @@
                     
                     <div class="card-body">
                       <h6>Tiktok link*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.tiktok')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitetiktok" class="form-control" name="sitetiktok" placeholder="Tiktok link" required>
+                            <input type="url" id="sitetiktok" class="form-control" name="sitetiktok" value="{{params ? params.tiktok : ''}}" placeholder="Tiktok link" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -195,10 +196,10 @@
                     
                     <div class="card-body">
                       <h6>Facebook link*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.fb')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="sitefb" class="form-control" name="sitefb" placeholder="Facebook link" required>
+                            <input type="url" id="sitefb" class="form-control" name="sitefb" value="{{params ? params.facebook : ''}}" placeholder="Facebook link" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>
@@ -217,10 +218,10 @@
                     
                     <div class="card-body">
                       <h6>Instagram link*</h6>
-                      <form action="javascript:void(0);">
+                      <form action="{{path('app.settings.insta')}}" method="POST">
                         <div class="row">
                           <div class="col-sm-6">
-                            <input type="file" id="siteinstagram" class="form-control" name="siteinstagram" placeholder="Instagram link" required>
+                            <input type="url" id="siteinstagram" class="form-control" name="siteinstagram" value="{{params ? params.insta : ''}}" placeholder="Instagram link" required>
                           </div>
                           <div class="mt-4">
                             <button type="submit" class="btn btn-primary me-2">Update</button>

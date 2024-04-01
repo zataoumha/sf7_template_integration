@@ -23,6 +23,9 @@ class Translation
     #[ORM\Column(type: Types::TEXT, nullable: true)]
     private ?string $translationValue = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $translationPage = null;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -60,6 +63,18 @@ class Translation
     public function setTranslationValue(?string $translationValue): static
     {
         $this->translationValue = $translationValue;
+
+        return $this;
+    }
+
+    public function getTranslationPage(): ?string
+    {
+        return $this->translationPage;
+    }
+
+    public function setTranslationPage(?string $translationPage): static
+    {
+        $this->translationPage = $translationPage;
 
         return $this;
     }
